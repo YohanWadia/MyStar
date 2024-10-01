@@ -26,39 +26,35 @@ class _MyHomePageState extends State<MyHomePage> {
   //=====================================
   
   moveRight(){
-    x=x+50;
+    
   }
   
   moveLeft(){
-    x=x-50;
+    
   }
   
   moveUp(){
-    y=y-50;
+    
   }
   
   moveDown(){
-    y=y+50;
+    
   } 
   
   moveRightUp(){
-    x=x+50;
-    y=y-50;
+    
   }
   
    moveRightDown(){
-    x=x+50;
-    y=y+50;
+    
   }
   
   moveLeftDown(){
-    x=x-50;
-    y=y+50;
+    
   }
   
   moveLeftUp(){
-    x=x-50;
-    y=y-50;
+    
   }
   
  
