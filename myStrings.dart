@@ -69,8 +69,8 @@ void main() {
   print("============================= Split ");
   //only after arrays
   
-  String week = "Mon, Tue, Wed, Thu, Fri, Sat, Sun";
-  print(week.split(','));
+   String week = "Mon - Tue - Wed - Thu - Fri - Sat - Sun";
+  print(week.split('-'));
   
   
   
