@@ -1,0 +1,11 @@
+ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  ),
+              minimumSize: Size(100, 100), // Adjust these values as needed          
+              textStyle: TextStyle(fontSize: 24),
+              ),
+              onPressed: (){},
+              child: Text(${box[0]}),
+            )
