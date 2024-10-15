@@ -1,3 +1,5 @@
+These are the assets for babyXylophone... remember to keep the notes directly in a folder called assets
+
 entry in pubspec is 
 
 flutter:
