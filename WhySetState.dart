@@ -64,9 +64,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
             child:Text("Increase Number & Change Color with setState()"),
             onPressed:(){
-              number++;
-              c = Colors.blue;
-              setState((){}); 
+              //Correct way to setState()
+              setState((){
+                number++;
+                c = Colors.blue;
+              }); 
             },
           ),
             
