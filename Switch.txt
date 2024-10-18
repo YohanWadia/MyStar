@@ -1,0 +1,25 @@
+class _MyHomePageState extends State<MyHomePage> {
+   bool isON = true;
+   TextStyle normalStyle = TextStyle(color:Colors.black, fontSize:18);
+   TextStyle isONStyle = TextStyle(color:Colors.red, fontSize:24);
+  
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      ///////////////
+
+
+
+      ///////////////
+          children: [
+            Text('OFF',style:normalStyle),
+            
+            Switch(
+             //////////////
+
+
+            /////////////
+          ),
+            
+          Text('ON', style: (isON)? isONStyle : normalStyle )  
