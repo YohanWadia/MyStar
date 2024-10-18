@@ -1,0 +1,26 @@
+Container(
+          padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
+          decoration: BoxDecoration(
+            color: Colors.pink[100],
+            border: Border.all(color: Colors.grey, width: 2),
+            borderRadius: BorderRadius.circular(15)),
+          child: DropdownButton(
+            style: TextStyle(color: Colors.black, fontSize: 16),
+            dropdownColor: Colors.pink[200],
+            focusColor: Colors.pink[100],
+            icon: Icon(Icons.arrow_downward),
+            underline: Container(height: 1,color: Colors.black),//SizedBox.shrink(),
+            value: initialValue,
+            items: kababasList.map((String items) {
+              return DropdownMenuItem(value: items, child: Text(items));
+            }).toList(),
+            onChanged: (String? newValue) {
+              if(newValue!="Select Kababas"){
+                setState(() {
+                  initialValue = newValue!;
+                  print("You have selected $initialValue");
+                });
+              }
+            },
+          ),
+        ),
