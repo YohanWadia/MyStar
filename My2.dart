@@ -25,29 +25,13 @@ class _MyHomePageState extends State<MyHomePage> {
  double x=0,y=0;
  String move = ''; 
  late Timer _timer; 
-  //=====================================
-  
-  moveRight(){
-   
-  }
-  
-  moveLeft(){
-    
-  }
-  
-  moveUp(){
-  
-  }
-  
-  moveDown(){
-    move='down';
-  } 
   
  
   void startMoving() {
     _timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
       setState(() {
-        print("Square is moving $move");
+//=====================================        
+        print("Timer: Square moves $move");
         
         if(move=='right'){
           
@@ -66,13 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
         
         
         
-        
+ //=====================================       
       });
     });
   }
 
    
- //=====================================
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,16 +78,31 @@ class _MyHomePageState extends State<MyHomePage> {
         Row( mainAxisAlignment:MainAxisAlignment.center,
           children:[
           ElevatedButton(
-          onPressed:(){moveLeft(); setState((){}); },
+          onPressed:(){
+            move="";
+            setState((){}); 
+          },
         child:Text("<<")),
+
         ElevatedButton(
-          onPressed:(){moveRight(); setState((){});},
+          onPressed:(){
+            move="";
+            setState((){});
+          },
         child:Text(">>")),
+
         ElevatedButton(
-          onPressed:(){moveUp(); setState((){});},
+          onPressed:(){
+            move="";
+            setState((){});
+          },
         child:Text("UP")),
+
         ElevatedButton(
-          onPressed:(){moveDown(); setState((){});},
+          onPressed:(){
+            move="down";
+            setState((){});
+          },
         child:Text("Down")),
         ])
         
@@ -140,4 +139,3 @@ class OpenPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => true;
 }
-
