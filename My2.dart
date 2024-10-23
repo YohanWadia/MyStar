@@ -36,12 +36,15 @@ class _MyHomePageState extends State<MyHomePage> {
         if(move=='right'){
           
         }
+       
         else if(move=='left'){
           
         }
+       
         else if(move=='down'){
           
         }
+       
         else if(move=='up'){
          
         }
@@ -77,38 +80,47 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         Row( mainAxisAlignment:MainAxisAlignment.center,
           children:[
-          ElevatedButton(
+       
+        ElevatedButton(
           onPressed:(){
             move="";
             setState((){}); 
           },
-        child:Text("<<")),
+        child:Text("<<")
+        ),
 
+           
         ElevatedButton(
           onPressed:(){
             move="";
             setState((){});
           },
-        child:Text(">>")),
+        child:Text(">>")
+        ),
 
+           
         ElevatedButton(
           onPressed:(){
             move="";
             setState((){});
           },
-        child:Text("UP")),
+        child:Text("UP")
+        ),
 
+           
         ElevatedButton(
           onPressed:(){
             move="down";
             setState((){});
           },
-        child:Text("Down")),
-        ])
-        
+        child:Text("Down")
+        ),
+
+           
+        ])        
       ]),
-             )
-    );
+     )
+   );
   }
   
   @override
