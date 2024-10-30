@@ -172,3 +172,18 @@ class OpenPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => true;
 }
+
+
+//===============
+
+// if (isMissilealive==false) {
+//   isBulletalive=true;             
+// }
+
+
+
+// if (isBulletalive==false) {
+//    isMissilealive=true;
+// }
+
+//===============
