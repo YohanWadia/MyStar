@@ -56,6 +56,14 @@ void main() {
   // print(letters[10]);//how to get the 10th alphabet?
   // print(letters[26]);//correct error?
   //How to dynamically always get the last letter?!
+
+
+   print("=============================String from a Characters Code ");  
+  // https://www.ascii-code.com/
+  int i=97;
+  print(String.fromCharCode(i));
+
+  
   
   
    print("=============================Substring ");  
