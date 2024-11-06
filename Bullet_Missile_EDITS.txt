@@ -1,0 +1,137 @@
+//===============1st Edit for correct restart
+
+        if(isBulletalive==true){
+          bulletx = bulletx + 25; 
+          if(bulletx>400){
+            isBulletalive=false;
+            bulletx=0;
+          }
+        }       
+        else if(isMissilealive==true){
+          missilex = missilex + 25;
+          if(missilex>400){
+            isMissilealive=false;
+            missilex=0;
+          }
+        }
+
+//===============
+
+
+//===============2nd Edit... for no over lapping
+
+       ElevatedButton(
+          onPressed:(){
+            
+            if (isMissilealive==false) {
+              isBulletalive=true;             
+            }
+
+            setState((){}); 
+          },
+        child:Text("Bullet")
+        ),
+        
+
+        ElevatedButton(
+          onPressed:(){
+
+            if (isBulletalive==false) {
+              isMissilealive=true;
+            }
+            
+            setState((){}); 
+          },
+        child:Text("Missile")
+        ),
+
+//===============
+
+
+//================== only 4 shots allowed
+line 31 change //int remaining .... to....
+int remaining=4;
+
+now for the elevated buttons
+
+    ElevatedButton(
+          onPressed:(){
+            
+            if (isMissilealive==false && remaining>0) {
+              isBulletalive=true;
+              remaining--;             
+            }
+
+            setState((){}); 
+          },
+        child:Text("Bullet")
+        ),
+        
+
+        ElevatedButton(
+          onPressed:(){
+
+            if (isBulletalive==false && remaining>0) {
+              isMissilealive=true;
+              remaining--;
+            }
+            
+            setState((){}); 
+          },
+        child:Text("Missile")
+        ),
+
+
+//======================
+
+
+//====================Refill
+
+ElevatedButton(
+          onPressed:(){
+
+            remaining=4;  
+
+            setState((){}); 
+          },
+        child:Text("ReFill")
+        ),
+
+//====================
+
+
+//============================Dangerous Error
+
+ElevatedButton(
+          onPressed:(){
+            
+            if (isMissilealive==false && remaining>0 && isBulletalive==false) {
+              isBulletalive=true;
+              remaining--;             
+            }
+
+            setState((){}); 
+          },
+        child:Text("Bullet")
+        ),
+        
+
+        ElevatedButton(
+          onPressed:(){
+
+            if (isBulletalive==false && remaining>0 && isMissilealive==false) {
+              isMissilealive=true;
+              remaining--;
+            }
+            
+            setState((){}); 
+          },
+        child:Text("Missile")
+        ),
+
+//===========================
+
+
+//==============last error
+make sure refill cannot take place unless remaining is zero
+
