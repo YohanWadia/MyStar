@@ -38,24 +38,21 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("Start Here..."),  
-            
-            ElevatedButton(
-            child:Text("First Button"),
-            onPressed:(){
-              
-              setState((){}); 
-            },
-          ),
-            
-            
-            
-          ],
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text("|--Start Here--|"),  
+          
+          ElevatedButton(
+          child:Text("Click"),
+          onPressed:(){ },
         ),
+
+        
+          
+          
+          
+        ],
       ),
      
     );
