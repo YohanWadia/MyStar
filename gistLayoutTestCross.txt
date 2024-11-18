@@ -1,0 +1,18 @@
+Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(   
+              width: 50,height: 50,       
+              color: Colors.red
+            ),
+            Container(   
+              width: 50,height: 50,       
+              color: Colors.red
+            ),
+            Container(   
+              width: 50,height: 50,       
+              color: Colors.red
+            ),            
+
+          ],
+        ),
