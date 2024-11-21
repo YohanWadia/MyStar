@@ -66,13 +66,16 @@ class _MyHomePageState extends State<MyHomePage> {
         
           Container(
             color: Colors.red,
+            width: 50,
+            height: 50
            ),
         
 
           Container(
-                      color: Colors.orange,
-                    ),
-          
+            color: Colors.orange,
+            width: 50,
+            height: 50
+           ),
           
 
         ],
