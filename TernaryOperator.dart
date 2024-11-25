@@ -5,7 +5,7 @@ void main() {
   String status="";
   
   
-  if (age<ageLimit){
+  if (age < ageLimit){
     status = "child is Allowed";
   }
   else{
