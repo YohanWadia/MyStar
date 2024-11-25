@@ -18,8 +18,8 @@ void main() {
   print("=====================");
   
   
-  status = (age<ageLimit)? "child is Allowed" : "child is NOT allowed";
-  print(status);
+  //status = (age<ageLimit)? "child is Allowed" : "child is NOT allowed";
+  //print(status);
   
   
   
