@@ -1,0 +1,16 @@
+GestureDetector(
+          onTap: (){ 
+            print("yeah!");
+            isClicked = !isClicked;
+            setState(() {});
+           },
+          child: AnimatedContainer(
+            width: (isClicked==false)? 300 : 100,
+            height: (isClicked==false)? 100 : 300,
+            color: (isClicked==false)? Colors.red : Colors.blue,
+            duration: Duration(seconds: 2),
+            curve: Curves.easeIn,
+            child: Image.asset("assets/minecraft.png"),
+            alignment: (isClicked==false)? Alignment.topCenter : Alignment.bottomCenter,
+          ),
+        ),
