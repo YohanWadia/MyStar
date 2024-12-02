@@ -68,8 +68,9 @@ class MyApp extends StatelessWidget {
                       'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
                       fit: BoxFit.contain,//see other options
                       ),
-              )
+              ),
 
+              //do image from assets and circular shape
 
             ],
           ),
