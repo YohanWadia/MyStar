@@ -1,0 +1,56 @@
+                      //1st effect
+                      
+                      BoxShadow(
+                        color: Colors.grey[500]!,
+                        offset: Offset(5, 5),
+                        blurRadius: 15.0,
+                        spreadRadius: 1,
+                        inset: false,
+                      ),
+                      BoxShadow(
+                        color: Colors.white,
+                        offset: Offset(-5, -5),
+                        blurRadius: 15.0,
+                        spreadRadius: 1,
+                        inset: false,
+                      ) 
+
+
+
+                      //2nd effect
+
+                      BoxShadow(
+                        color: Colors.grey[500]!,
+                        offset: Offset(10, 10),
+                        blurRadius: 15.0,
+                        spreadRadius: 1,
+                        inset: true,
+                      ),
+                      BoxShadow(
+                        color: Colors.white,
+                        offset: Offset(-10, -10),
+                        blurRadius: 15.0,
+                        spreadRadius: 1,
+                        inset: true,
+                      ) 
+
+
+                      //3rd FINAL
+add animatedcontainer
+add duration
+add shadows
+
+                      BoxShadow(
+                        color: Colors.grey[500]!,
+                        offset: (isOff==true)? Offset(5, 5) : Offset(10, 10),
+                        blurRadius: (isOff==true)? 15.0 : 20.0,
+                        spreadRadius: 1,
+                        inset: isOff,
+                      ),
+                      BoxShadow(
+                        color: Colors.white,
+                        offset: (isOff==true)? Offset(-5, -5) : Offset(-10, -10),
+                        blurRadius: (isOff==true)? 15.0 : 20.0,
+                        spreadRadius: 1,
+                        inset: isOff,
+                      )

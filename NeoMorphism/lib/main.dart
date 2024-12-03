@@ -28,83 +28,85 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> { 
-bool isON=false;
-
+bool isOff = true;
 
   @override
-  Widget build(BuildContext context) {
-    
-    return Scaffold( 
-      backgroundColor: Colors.grey[300], 
-      body: Column(
-        children: [
-          GestureDetector( 
-            onTap: () { 
-              setState(() { 
-                isON = !isON; 
-              }); 
-            }, 
-            child: AnimatedContainer( 
-              child: Icon( 
-                Icons.bluetooth, 
-                size: 75,
-                color: isON ? Color.fromARGB(255, 90, 241, 168) : Colors.grey, 
-              ),             
-              duration: Duration(milliseconds: 250), 
-              height: 150, 
-              width: 150, 
-              decoration: BoxDecoration( 
-                color: Colors.grey[300], 
-                shape: BoxShape.circle, 
-                boxShadow: isON?
-                [                   
-                  const BoxShadow( 
-                    color: Colors.white,
-                    offset: Offset(10,10), 
-                    blurRadius: 20, 
-                    spreadRadius: 1, 
-                    inset: true, 
-                  ), 
-                  const BoxShadow( 
-                    color:  Color(0xFFBDBDBD),
-                    offset: Offset(-10, -10), 
-                    blurRadius: 20, 
-                    spreadRadius: 1, 
-                    inset: true, 
-                  ), 
-                  const BoxShadow( 
-                    color:  Color(0xFFBDBDBD),
-                    offset: Offset(3, 3), 
-                    blurRadius: 5, 
-                    spreadRadius: 0.5, 
-                    inset: false, 
-                  ),
-                ] 
+  Widget build(BuildContext context) { 
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
 
-                :  
-                
-                [ 
-                    
-                  const BoxShadow( 
-                    color: Color(0xFFBDBDBD),
-                    offset: Offset(10, 10), 
-                    blurRadius: 20, 
-                    spreadRadius: 1, 
-                    inset: true, 
-                  ), 
-                  const BoxShadow( 
-                    color: Colors.white, 
-                    offset: Offset(-10, -10), 
-                    blurRadius: 20, 
-                    spreadRadius: 1, 
-                    inset: true, 
-                  ), 
-                ], 
-              ), 
-            ), 
+              //=========================1st
+              Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [ 
+                                            
+                    ],
+                  ),
+                child: Icon(
+                  Icons.wifi,
+                  size: 50,
+                  color: Colors.green
+                ),
+              ),
+
+
+//=========================2nd
+              Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [ 
+                     
+                    ],
+                  ),
+                child: Icon(
+                  Icons.wifi,
+                  size: 50,
+                  color: Colors.grey[500]
+                ),
+              ),
+
+
+
+
+
+              //========================FINAL   
+              GestureDetector(
+                onTap: () {
+                  isOff = !isOff;
+                  print(isOff);
+                  setState(() { });
+                },
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [ 
+                       
+                    ],
+                  ),
+                child: Icon(
+                  Icons.wifi,
+                  size: 50,
+                  color: (isOff==true)? Colors.grey[500] : Colors.green 
+                ),
+              ),
+        ),
+            ],
           ),
-        ],
-      ), 
+      )
     );
   }
 }
