@@ -1,30 +1,42 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Text Input',
-      home: MyCustomForm(),
+    return MaterialApp(
+      title: 'Flutter App!!',
+      theme: ThemeData(
+        colorSchemeSeed: Colors.indigo,
+        useMaterial3: true,
+        brightness: Brightness.light,
+      ),
+      darkTheme: ThemeData(
+        colorSchemeSeed: Colors.blue,
+        useMaterial3: true,
+        brightness: Brightness.dark,
+      ),
+      home: const MyHomePage(title: 'Flutter Example App'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
-// Define a custom Form widget.
-class MyCustomForm extends StatefulWidget {
-  const MyCustomForm({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
 
   @override
-  State<MyCustomForm> createState() => _MyCustomFormState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-// Define a corresponding State class.
-// This class holds data related to the Form.
-class _MyCustomFormState extends State<MyCustomForm> {
+class _MyHomePageState extends State<MyHomePage> {
   // Create a text controller and use it to retrieve the current value
   // of the TextField.
   final myController = TextEditingController();
@@ -94,4 +106,5 @@ class _MyCustomFormState extends State<MyCustomForm> {
       ),
     );
   }
+  
 }
