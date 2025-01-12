@@ -187,6 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
 
+          // ------put the 2 Text for score below and see the problem-------
             
 
 
