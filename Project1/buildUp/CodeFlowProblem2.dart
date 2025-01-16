@@ -210,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
 
-          // ------put the 2 Text for score below and see the problem-------
+          // ------put the 2 Text for score below ------
           Text("$whoseChance to play...", style: TextStyle(fontSize: 36),),
           Text("Player1: $score1"),
           Text("Player2: $score2")
@@ -222,6 +222,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  //---------------------on continuous button clicks observe Problem 2 --------------------
   void set_toPut() {
     if(toPut=="O"){
       toPut="X";
