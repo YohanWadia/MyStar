@@ -1,0 +1,7 @@
+Add an FAB for full reset
+Scores should increase in reset
+Status should be re calculated in reset
+Add Diagonals to the checking 
+.... Mix Pre to get the final code!
+
+Deploy to Web & Android Mobile ! 
