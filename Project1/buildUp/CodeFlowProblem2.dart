@@ -213,9 +213,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
           // ------put the 2 Text for score below ------
-          Text("$whoseChance to play...", style: TextStyle(fontSize: 36),),
-          Text("Player1: $score1"),
-          Text("Player2: $score2")
+          Text("$whoseChance $info", style: TextStyle(fontSize: 24),),
+          Text("$name1: $score1"),
+          Text("$name2: $score2")
 
 
         ],
