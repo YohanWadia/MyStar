@@ -39,9 +39,11 @@ class _MyHomePageState extends State<MyHomePage> {
   
   String b1="",b2="",b3="",b4="",b5="",b6="",b7="",b8="",b9="";
   int score1=0,score2=0;
-  int move=1;
-  String whoseChance="Player1";
-  String toPut = "O";
+  int move=0;
+  String name1="Vejas", name2="Yohan";
+  String whoseChance="Vejas";
+  String info = "to play";
+  String toPut="O";
 
 
   @override
@@ -223,6 +225,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   //---------------------on continuous button clicks observe Problem 2 --------------------
+  //------------------- and player's names dont change ???
   void set_toPut() {
     if(toPut=="O"){
       toPut="X";
@@ -230,7 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
     else if(toPut=="X"){
       toPut="O";
     }
-  }
+  }//xxxxx
 
 
 }
