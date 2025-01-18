@@ -47,9 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(        
-        child: 
-               
+      body: 
+      Center(        
+        child:                
         Container(
           width: 250,
           height: 250,
@@ -120,11 +120,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
 :
 
-        Container(
+       Center(
+        child: Container(
           width: 250,
           height: 250,
           child: Icon(Icons.sports_esports,size: 250),
-        ) 
+        ),
+      )  
 
 
 
