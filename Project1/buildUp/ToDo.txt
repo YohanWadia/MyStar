@@ -1,7 +1,8 @@
-
+Stop cheating reset
 Add Diagonals to the checking 
 .... Mix Pre to get the final code!
-May be add color to the 3 buttons that show victory
+
+<<May be add color to the 3 buttons that show victory>>
 
 
 Deploy to Web & Android Mobile ! 
