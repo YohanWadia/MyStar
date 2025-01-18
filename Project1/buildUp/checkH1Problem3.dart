@@ -40,8 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
   String b1="",b2="",b3="",b4="",b5="",b6="",b7="",b8="",b9="";
   int score1=0,score2=0;
   int move=0;
-  String whoseChance="Player1";
-  String toPut = "O";
+  String name1="Vejas", name2="Yohan";
+  String whoseChance="Vejas";
+  String info = "to play";
+  String toPut="O";
 
 
   @override
@@ -97,6 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           if (b2=="" && move<9) {
                             set_toPut();
                             b2 = toPut;
+                            checkH1();
                             setState(() { });
                           }
                         },
@@ -116,6 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               if (b3=="" && move<9) {
                                 set_toPut();
                                 b3 = toPut;
+                                checkH1();
                                 setState(() { });
                               }
                             },
@@ -235,10 +239,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
           // ------put the 3 Texts below-------
-          Text("$whoseChance to play...", style: TextStyle(fontSize: 36),),
-          Text("Player1: $score1"),
-          Text("Player2: $score2")
-
+          Text("$whoseChance $info", style: TextStyle(fontSize: 24),),
+          Text("$name1: $score1"),
+          Text("$name2: $score2")
+          
 
         ],
       ),
@@ -246,7 +250,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void set_toPut() {
+   void set_toPut() {
     move++;
     if(toPut=="O"){
       toPut="X";
@@ -255,13 +259,14 @@ class _MyHomePageState extends State<MyHomePage> {
       toPut="O";
     }
 
-    if(whoseChance=="Player1"){
-      whoseChance="Player2";
+    if(whoseChance==name1){
+      whoseChance=name2;
     }
-    else if(whoseChance=="Player2"){
-      whoseChance="Player1";
+    else if(whoseChance==name2){
+      whoseChance=name1;
     }
-  }
+
+  }//xxxxxxxx
 
   void checkH1(){
     if(b1==b2 && b2==b3 && b3==b1){// <<< shorten this if condition 
