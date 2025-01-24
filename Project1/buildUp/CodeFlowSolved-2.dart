@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         onPressed: (){
                           if (b1=="" && move<9) {
-                            set_toPut();
+                            change_toPut();
                             b1 = toPut;
                             setState(() { });
                           }
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         onPressed: (){
                           if (b2=="" && move<9) {
-                            set_toPut();
+                            change_toPut();
                             b2 = toPut;
                             setState(() { });
                           }
@@ -227,7 +227,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void set_toPut() {
+  void change_toPut() {
     move++;
     if(toPut=="O"){
       toPut="X";
