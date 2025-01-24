@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           textStyle: TextStyle(fontSize: 36),
                         ),
                         onPressed: (){
-                          set_toPut();
+                          change_toPut();
                           b1 = toPut;
                           setState(() { });
                         },
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           textStyle: TextStyle(fontSize: 36),
                         ),
                         onPressed: (){
-                          set_toPut();
+                          change_toPut();
                           b2 = toPut;
 
                           setState(() { });
@@ -226,7 +226,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   //---------------------on continuous button clicks observe Problem 2 --------------------
   //------------------- and player's names dont change ???
-  void set_toPut() {
+  void change_toPut() {
     if(toPut=="O"){
       toPut="X";
     }
