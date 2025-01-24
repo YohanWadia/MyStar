@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         onPressed: (){
                           if (b1=="" && move<9 && isVictory==false) {
-                            set_toPut();
+                            change_toPut();
                             b1 = toPut;
                             checkH1();
                             checkV1();
@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         onPressed: (){
                           if (b2=="" && move<9 && isVictory==false) {
-                            set_toPut();
+                            change_toPut();
                             b2 = toPut;
                             checkH1();
                             checkV2();
@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             onPressed: (){
                               if (b3=="" && move<9 && isVictory==false) {
-                                set_toPut();
+                                change_toPut();
                                 b3 = toPut;
                                 checkH1();
                                 checkV3();
@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         onPressed: (){
                           if (b4=="" && move<9 && isVictory==false) {
-                            set_toPut();
+                            change_toPut();
                             b4 = toPut;
                             checkH2();
                             checkV1();
@@ -173,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         onPressed: (){
                           if (b5=="" && move<9 && isVictory==false) {
-                            set_toPut();
+                            change_toPut();
                             b5 = toPut;
                             checkH2();
                             checkV2();
@@ -195,7 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             onPressed: (){
                               if (b6=="" && move<9 && isVictory==false) {
-                                set_toPut();
+                                change_toPut();
                                 b6 = toPut;
                                 checkH2();
                                 checkV3();
@@ -224,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         onPressed: (){
                           if (b7=="" && move<9 && isVictory==false) {
-                            set_toPut();
+                            change_toPut();
                             b7 = toPut;                            
                             checkH3();
                             checkV1();
@@ -246,7 +246,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         onPressed: (){
                           if (b8=="" && move<9 && isVictory==false) {
-                            set_toPut();
+                            change_toPut();
                             b8 = toPut;                            
                             checkH3();
                             checkV2();
@@ -268,7 +268,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             onPressed: (){
                               if (b9=="" && move<9 && isVictory==false) {
-                                set_toPut();
+                                change_toPut();
                                 b9 = toPut;                            
                                 checkH3();
                                 checkV3();
@@ -309,7 +309,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void set_toPut() {
+  void change_toPut() {
     move++;
     if(toPut=="O"){
       toPut="X";
