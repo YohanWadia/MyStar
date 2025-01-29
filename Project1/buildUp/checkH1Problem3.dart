@@ -161,7 +161,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           minimumSize: Size(100, 100), // Adjust these values as needed          
                           textStyle: TextStyle(fontSize: 36),
                         ),
-                        onPressed: (){},
+                        onPressed: (){
+                           if (b5=="" && move<9) {
+                            change_toPut();
+                            b5 = toPut;
+                            checkH1();
+                            setState(() { });
+                          }
+                        },
                         child: Text(b5),
                       ),
            
