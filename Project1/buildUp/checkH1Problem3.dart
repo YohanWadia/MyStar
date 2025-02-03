@@ -44,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String whoseChance="Vejas";
   String info = "to play";
   String toPut="O";
+  bool isVictory=false;
 
 
   @override
