@@ -36,9 +36,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  final myController1 = TextEditingController();
-  final myController2 = TextEditingController();
   String name1="", name2="";
+  final myController1 = TextEditingController();
+  final myController2 = TextEditingController();  
   bool startGame=false;
   
   @override
