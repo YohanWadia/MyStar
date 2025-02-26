@@ -2,8 +2,8 @@
 there are only 4 components here
 - TextBox to enter name
 - TextBox to enter password
-- A Button
-- a Text to display the result
+- ElevatedButton
+- Text to display what ever is the result
 
 ---
 
@@ -15,7 +15,7 @@ there are only 4 components here
 ---
 
 ## Test
-- on the buttons onPressed event you have to have an if condition that accordingly gives you the result
-- "Access Granted" if the name is equal to the text we get from myController.text and so is the password equal to the text we get from myController2.text
-- "Access Denied" if even one of them are wrong
+- on the Button's onPressed event you have to have to write an if condition that accordingly sets the result
+- the result is "Access Granted" if the name is equal to the text we get from myController1.text and so must the password be equal to the text we get from myController2.text
+- the result is "Access Denied" if even one of them are wrong
 
