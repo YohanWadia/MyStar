@@ -1,0 +1,4 @@
+<img src="https://static01.nyt.com/images/2014/07/20/sunday-review/20mugshot-meeks/20mugshot-meeks-articleLarge.jpg?quality=75&auto=webp&disable=upscale" />
+
+<link rel="icon" href="logo.png">
+  
