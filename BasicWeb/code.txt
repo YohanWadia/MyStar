@@ -1,4 +1,32 @@
 <img src="https://static01.nyt.com/images/2014/07/20/sunday-review/20mugshot-meeks/20mugshot-meeks-articleLarge.jpg?quality=75&auto=webp&disable=upscale" />
 
-<link rel="icon" href="logo.png">
+
+ <div style="color: violet; background-color: blue; font-style:italic; margin: 20px">
+        Stuff
+ </div>
+
+ <div style="color: violet; background-color: blue; font-style:italic; margin: 20px">
+        More Stuff
+ </div>
   
+
+ <p> Checking styles for P tags</p>
+
+ <p> Special P Tag </p>
+
+
+
+
+       .myClass{
+            color: violet; 
+            background-color: blue; 
+            font-style:italic; 
+            margin: 20px;
+        }
+
+        p{
+            text-indent: 45px;
+            text-transform: uppercase;
+            text-decoration: line-through;
+            font-size: 24px;
+        }
