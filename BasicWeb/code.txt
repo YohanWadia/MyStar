@@ -11,9 +11,11 @@
   
 
  <p> Checking styles for P tags</p>
+<button>My 1st Button</button>
+    
 
  <p> Special P Tag </p>
-
+<button>My 2nd Button</button>
 
 
 
