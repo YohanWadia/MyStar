@@ -1,40 +1,25 @@
 /* Basic styling for the body */
 body {
-    /* Center content horizontally and vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    /* Add some spacing between elements */
     padding: 20px;
-    /* Light gray background */
-    background-color: #f0f0f0;
+    background-color: #fca9a9;
 }
 
 /* Style for both paragraphs */
 p {
     /* Make text larger and more readable */
-    font-size: 1.2em;
-    /* Add comfortable spacing around paragraphs */
-    margin: 15px 0;
-    /* Improve text readability */
+    font-size: 24px;
     line-height: 1.6;
     /* Add subtle shadow for depth */
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 2px rgba(73, 252, 3,0.5);
 }
 
 /* Specific styling for the first paragraph */
 #para1 {
-    /* Make first paragraph stand out slightly */
     color: #333;
-    /* Add subtle transition effect */
-    transition: color 0.3s ease;
 }
 
 /* Specific styling for the second paragraph */
 #para2 {
-    /* Different color to distinguish it */
     color: #666;
 }
 
@@ -65,5 +50,13 @@ button:hover {
 /* Active state for button */
 button:active {
     /* Slightly darker when clicked */
-    background-color: #004d99;
+    background-color: #0b03fc;
 }
+
+
+
+/*class for color effect*/
+.myFx{
+ background-color: white;
+}
+
