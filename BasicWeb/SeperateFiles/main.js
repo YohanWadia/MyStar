@@ -1,8 +1,9 @@
 // Function to change the text in #para2
 function changeText() {
     // Get the second paragraph element
-    const para2 = document.getElementById('para2');
-    
+    var para1 = document.getElementById('para1');
+
     // Change its text content
-    para2.textContent = 'This is the new text in the second paragraph!';
+    para1.innerHTML = 'This is the NEW TEXT!';
+
 }
