@@ -1,0 +1,69 @@
+/* Basic styling for the body */
+body {
+    /* Center content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Add some spacing between elements */
+    padding: 20px;
+    /* Light gray background */
+    background-color: #f0f0f0;
+}
+
+/* Style for both paragraphs */
+p {
+    /* Make text larger and more readable */
+    font-size: 1.2em;
+    /* Add comfortable spacing around paragraphs */
+    margin: 15px 0;
+    /* Improve text readability */
+    line-height: 1.6;
+    /* Add subtle shadow for depth */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Specific styling for the first paragraph */
+#para1 {
+    /* Make first paragraph stand out slightly */
+    color: #333;
+    /* Add subtle transition effect */
+    transition: color 0.3s ease;
+}
+
+/* Specific styling for the second paragraph */
+#para2 {
+    /* Different color to distinguish it */
+    color: #666;
+}
+
+/* Style the button */
+button {
+    /* Make button larger and more prominent */
+    padding: 10px 20px;
+    /* Round corners for modern look */
+    border-radius: 5px;
+    /* Remove default border */
+    border: none;
+    /* Add nice background color */
+    background-color: #007bff;
+    /* White text for contrast */
+    color: white;
+    /* Add hover effect */
+    cursor: pointer;
+    /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+button:hover {
+    /* Darken background slightly on hover */
+    background-color: #0056b3;
+}
+
+/* Active state for button */
+button:active {
+    /* Slightly darker when clicked */
+    background-color: #004d99;
+}
