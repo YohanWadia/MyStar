@@ -1,0 +1,5 @@
+in pubspec
+put 2 audios in assets folder
+
+dependency
+audioplayers: ^6.4.0
