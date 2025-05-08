@@ -47,7 +47,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  bool choice1=false, choice2=false,choice3=false;
+  List<bool> choice =[false,false,false];
   
   @override
   Widget build(BuildContext context) {
@@ -62,36 +62,49 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ChoiceChip(
                     label: Text('FootBall'),
-                    selected: choice1 == true,
+                    selected: choice[0] == true,
                     onSelected: (bool selected) {
                       setState(() {
-                        choice1 = selected ? true : false;
+                        choice[0] = selected ? true : false;
                       });
                     },
                   ),
             ChoiceChip(
                     label: Text('BasketBall'),
-                    selected: choice2 == true,
+                    selected: choice[1] == true,
                     onSelected: (bool selected) {
                       setState(() {
-                        choice2 = selected ? true : false;
+                        choice[1] = selected ? true : false;
                       });
                     },
                   ),
 
                   ChoiceChip(
                     label: Text('Tennis'),
-                    selected: choice3 == true,
+                    selected: choice[2] == true,
                     onSelected: (bool selected) {
                       setState(() {
-                        choice3 = selected ? true : false;
+                        choice[2] = selected ? true : false;
                       });
                     },
                   ),
           ],
         ),
       ),
+     floatingActionButton: FloatingActionButton(
+        onPressed: showChoices,
+        tooltip: 'Choose Sport',
+        child: const Icon(Icons.menu),
+      ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
+
+  void showChoices(){
+    print("You chose....");
+    print(choice);    
+  }
+
+
 }
