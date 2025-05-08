@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _State extends State<MyApp> {
-  String initialValue = 'Select Kababas';
+  String presentValue = 'Select Kababas';
 
   var kababasList = [
     'Select Kababas',
@@ -41,15 +41,15 @@ class _State extends State<MyApp> {
           focusColor: Colors.pink[100],
           icon: Icon(Icons.arrow_downward),
           //underline default... with sizedbox .. and with container
-          value: initialValue,
+          value: presentValue,
           items: kababasList.map((String items) {
             return DropdownMenuItem(value: items, child: Text(items));
           }).toList(),
           onChanged: (String? newValue) {
             //how to disallow "Select Kababas" from being selected
               setState(() {
-                initialValue = newValue!;
-                print("You have selected $initialValue");
+                presentValue = newValue!;
+                print("You have selected $presentValue");
               });
             
           },
