@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark,
       ),
-      home: const MyHomePage(title: 'Flutter Example App'),
+      home: const MyHomePage(title: 'Check Boxes'),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -38,10 +38,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  bool box1val = false;
-  bool box2val = false;
-  bool box3val = false;
-  bool box4val = false;
+  List<bool> checked = [false,false,false,false];
+  
   
   @override
   Widget build(BuildContext context) {
@@ -57,10 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
             Expanded(
               child: CheckboxListTile(
-              value: box1val,
+              value: checked[0],
               onChanged: (bool? value) {
                 setState(() {
-                  box1val = value!;
+                  checked[0] = value!;
                 });
               },
               title: const Text('Fries'),
@@ -70,10 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
           Expanded(
             child: CheckboxListTile(
-              value: box2val,
+              value: checked[1],
               onChanged: (bool? value) {
                 setState(() {
-                  box2val = value!;
+                  checked[1] = value!;
                 });
               },
               title: const Text('Drink'),
@@ -83,10 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
           Expanded(
             child: CheckboxListTile(
-              value: box3val,
+              value: checked[2],
               onChanged: (bool? value) {
                 setState(() {
-                  box3val = value!;
+                  checked[2] = value!;
                 });
               },
               title: const Text('Cookie'),
@@ -97,10 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
           Expanded(
             child: CheckboxListTile(
-              value: box4val,
+              value: checked[3],
               onChanged: (bool? value) {
                 setState(() {
-                  box4val = value!;
+                  checked[3] = value!;
                 });
               },
               title: const Text('Jalapeno'),
@@ -111,7 +109,24 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: order,
+        tooltip: 'Place Order',
+        child: const Icon(Icons.menu),
+      ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
+
+  void order(){
+    print("Order....");
+    print(checked);
+
+
+    
+  }
+
+
 }
