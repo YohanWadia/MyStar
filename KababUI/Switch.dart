@@ -52,11 +52,12 @@ class _MyHomePageState extends State<MyHomePage> {
             Switch(
             value: isON,
             activeColor: Colors.red,
-            onChanged: (bool value) {
-              // This is called when the user toggles the switch.
+            onChanged: (bool value) {              
               setState(() {
                 isON = value;
+                print(isON);
               });
+
             },
           ),
             
