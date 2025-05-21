@@ -12,12 +12,16 @@ Future<void> main() async {
   
   
   
+  /* 
   for(int i=0; i<10;i++){   
     x=rnd.nextInt(10);
 
-    print("$i ... $x");    
+    print("$i ... $x");
+  } 
+  */
 
-  }
+
+
 
 
 
