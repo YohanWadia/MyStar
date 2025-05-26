@@ -35,14 +35,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int selectedRadio=1;
+  int selectedRadio=0;
   
-  
-setSelectedRadio(int val) {
-  setState(() {
-    selectedRadio = val;
-  });
-}
   
   @override
   Widget build(BuildContext context) {
@@ -63,8 +57,9 @@ setSelectedRadio(int val) {
           groupValue: selectedRadio,
           activeColor: Colors.green,
           onChanged: (val) {
-            print("Radio $val");
-            setSelectedRadio(val!);
+           print("RadioButton $val selected");
+            selectedRadio = val!;
+            setState(() {});
           },
         ),
       ),
@@ -78,9 +73,10 @@ setSelectedRadio(int val) {
           groupValue: selectedRadio,
           activeColor: Colors.green,
           onChanged: (val) {
-            print("Radio $val");
-            setSelectedRadio(val!);
-          },
+            print("RadioButton $val selected");
+            selectedRadio = val!;
+            setState(() {});
+          }
         ),
       ),
     ),
@@ -93,8 +89,9 @@ setSelectedRadio(int val) {
           groupValue: selectedRadio,
           activeColor: Colors.green,
           onChanged: (val) {
-            print("Radio $val");
-            setSelectedRadio(val!);
+            print("RadioButton $val selected");
+            selectedRadio = val!;
+            setState(() {});
           },
         ),
       ),
