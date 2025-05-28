@@ -70,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onChanged: (double value) {
                 setState(() {
                   sliderValue = value;
+                  print(sliderValue);
                 });
               },
             ),
