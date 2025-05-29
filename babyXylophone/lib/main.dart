@@ -76,6 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
             width: 50,
             height: 50
            ),
+
+
+
+
+
           
 
         ],
@@ -87,3 +92,5 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 }
+
+//onTap:() async{ await player.play(AssetSource("note1.mp3"));},
