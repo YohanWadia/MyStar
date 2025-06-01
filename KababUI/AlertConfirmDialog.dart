@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,7 +40,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String? status = "No Order Placed";
+  String status = "No Order";
+  String buzzer = "None";
   
   @override
   Widget build(BuildContext context) {
@@ -53,8 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ElevatedButton(
               onPressed: ()async{
-                status = await
-                showDialog<String>(
+                await showDialog<String>(
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
                     title: const Text('Order'),
@@ -62,13 +64,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     actions: <Widget>[
                       TextButton(
                         onPressed: () {
-                          Navigator.pop(context, 'No Order');
+                          status = "Order Cancelled";
+                          Navigator.pop(context);
                         },
                         child: const Text('Cancel'),
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.pop(context, 'Order Confirmed');
+                          status = "Order Confirmed";
+                          Random rnd = Random();
+                          int number = rnd.nextInt(15);
+                          buzzer = "Please pick up buzzer $number";
+                          Navigator.pop(context);
                         },
                         child: const Text('OK'),
                       ),
@@ -76,12 +83,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     )
                   );
 
-                  status ??= "No Order";
                   setState(() { });
               },
               child: Text("Place Order")
             ),
-            Text("$status"),
+            Text(status),
+            Text(buzzer),
 
             
 
