@@ -40,8 +40,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String status = "No Order";
-  String buzzer = "None";
+  String status = "";
+  String buzzer = "";
+  String waitingTime = "";
+  String toppings = "";
+  String drink = "";
+  String fries = "";
   
   @override
   Widget build(BuildContext context) {
@@ -55,13 +59,15 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
+              child: Text("Place Order"),
               onPressed: ()async{
                 await showDialog<String>(
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
                     title: const Text('Order'),
-                    content: const Text('You want a Pizza with Salami'),
+                    content: const Text('You want a Pizza'),
                     actions: <Widget>[
+                      //===========Cancelled
                       TextButton(
                         onPressed: () {
                           status = "Order Cancelled";
@@ -69,12 +75,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         child: const Text('Cancel'),
                       ),
+
+                      //=================OK
                       TextButton(
                         onPressed: () {
-                          status = "Order Confirmed";
+                          status = "";
                           Random rnd = Random();
                           int number = rnd.nextInt(15);
-                          buzzer = "Please pick up buzzer $number";
+                         
                           Navigator.pop(context);
                         },
                         child: const Text('OK'),
@@ -84,11 +92,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
 
                   setState(() { });
-              },
-              child: Text("Place Order")
+              },              
             ),
+
             Text(status),
             Text(buzzer),
+            Text(waitingTime),
 
             
 
