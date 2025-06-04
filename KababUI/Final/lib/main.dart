@@ -71,9 +71,7 @@ var kababasList = [
   'Open Kababas'
 ];
 
-int selectedRadio=1;
-String meatSelected="Male";
-
+int selectedRadio=0;
 
 List<bool> checked = [false,false,false,false];
 
@@ -135,8 +133,9 @@ String waitingTime = "";
             ),
           ),
         //=============================
-        SizedBox(height: 30,),
-        Text("Meat",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+        
+
+        Text("Meat"),
         Row(
           children: [            
           Expanded(child:
@@ -149,7 +148,6 @@ String waitingTime = "";
               onChanged: (val) {
               print("RadioButton $val selected");
                 selectedRadio = val!;
-                meatSelected="Male";
                 setState(() {});
               },
             ),
@@ -190,8 +188,8 @@ String waitingTime = "";
     ]),
 //==============================
 
-        SizedBox(height: 30,),
-        Text("Extras",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+       
+        Text("Extras"),
         Row(          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -251,8 +249,8 @@ String waitingTime = "";
         ),
         //=============================
 
-      SizedBox(height: 30,),
-      Text("Padazai",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+
+      Text("Padazai"),
       Row(          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -298,8 +296,8 @@ String waitingTime = "";
         ),
 //==================================
 
-        SizedBox(height: 30,),
-        Text("Spice",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+       
+        Text("Spice"),
         Slider(
           value: sliderValue,
           max: 5,
@@ -313,7 +311,7 @@ String waitingTime = "";
           },
         ),
 //====================================
-      SizedBox(height: 30,),
+
       Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -359,8 +357,8 @@ String waitingTime = "";
   }
 
   void placeMyOrder() {
-    String fullOrder="";
-    if(true){}
+    String fullOrder="You have selected ";
+    
 
 
     //====================
@@ -368,7 +366,7 @@ String waitingTime = "";
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
                     title: const Text('Order'),
-                    content: const Text('You want a Pizza'),
+                    content: Text(fullOrder),
                     actions: <Widget>[
                       //===========Cancelled
                       TextButton(
