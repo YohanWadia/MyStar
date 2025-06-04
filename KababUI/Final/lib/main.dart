@@ -2,7 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(const ScaleTransitionExampleApp());
+void main() {
+  runApp(const ScaleTransitionExampleApp());
+}
+
+
+
+
 
 class ScaleTransitionExampleApp extends StatelessWidget {
   const ScaleTransitionExampleApp({super.key});
@@ -354,7 +360,7 @@ String waitingTime = "";
 
   void placeMyOrder() {
     String fullOrder="";
-
+    if(true){}
 
 
     //====================
@@ -396,3 +402,12 @@ String waitingTime = "";
 }
 
 
+
+
+
+
+
+
+
+                          
+                          
