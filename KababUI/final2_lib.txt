@@ -400,25 +400,5 @@ String waitingTime = "";
 
 
 
- String fullOrder="You have selected $presentValue";
-    
-    String addMeat="";
-    if(selectedRadio==1){ addMeat="Chicken";}
-    else if(selectedRadio==2){ addMeat="Beef";}
-    else if(selectedRadio==3){ addMeat="Pork";}
-
-    fullOrder = fullOrder + " with $addMeat.";
-
-    String addExtras="";
-    if(choice[0]==true){addExtras=" Fries";}
-    if(choice[1]==true){addExtras=addExtras + " Drink";}
-    if(choice[2]==true){addExtras=addExtras + " Cookie";}
-    if(choice[3]==true){addExtras=addExtras + " KetchUp";}
-
-    fullOrder = fullOrder +"\nExtras Selected: $addExtras";
-
-
-
-
                           
                           
