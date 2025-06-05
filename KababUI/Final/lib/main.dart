@@ -97,19 +97,16 @@ String waitingTime = "";
           children: [
             ScaleTransition(
               scale: _animation,
-              child:  Padding(
-                padding: EdgeInsets.all(8.0),
-                child: SizedBox(
-                  width: 200.0,
-                  height: 80.0,
-                  child: Image.asset("assets/images/logo.jpg")
-                ),
+              child:  SizedBox(
+                width: 200.0,
+                height: 80.0,
+                child: Image.asset("assets/images/logo.jpg")
               ),
             ),
             //===============================
 
           Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               color: Colors.pink[200]),
@@ -134,13 +131,13 @@ String waitingTime = "";
           ),
         //=============================
         
-
+        SizedBox(height: 20,),
         Text("Meat"),
         Row(
           children: [            
           Expanded(child:
             ListTile(
-            title: Text("Male"),
+            title: Text("Chicken"),
             leading: Radio(
               value: 1,
               groupValue: selectedRadio,
@@ -156,7 +153,7 @@ String waitingTime = "";
    
           Expanded(child:
             ListTile(
-            title: Text("Female"),
+            title: Text("Pork"),
             leading: Radio(
               value: 2,
               groupValue: selectedRadio,
@@ -172,7 +169,7 @@ String waitingTime = "";
    
           Expanded(child:
             ListTile(
-            title: Text("EMail"),
+            title: Text("Beef"),
             leading: Radio(
               value: 3,
               groupValue: selectedRadio,
@@ -188,7 +185,7 @@ String waitingTime = "";
     ]),
 //==============================
 
-       
+       SizedBox(height: 20,),
         Text("Extras"),
         Row(          
           mainAxisAlignment: MainAxisAlignment.center,
@@ -249,13 +246,13 @@ String waitingTime = "";
         ),
         //=============================
 
-
+      SizedBox(height: 20,),
       Text("Padazai"),
       Row(          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ChoiceChip(
-                    label: Text('FootBall'),
+                    label: Text('Garlic'),
                     selected: choice[0] == true,
                     onSelected: (bool selected) {
                       setState(() {
@@ -264,7 +261,7 @@ String waitingTime = "";
                     },
                   ),
             ChoiceChip(
-                    label: Text('BasketBall'),
+                    label: Text('Teriyaki'),
                     selected: choice[1] == true,
                     onSelected: (bool selected) {
                       setState(() {
@@ -274,7 +271,7 @@ String waitingTime = "";
                   ),
 
                   ChoiceChip(
-                    label: Text('Tennis'),
+                    label: Text('Krienai'),
                     selected: choice[2] == true,
                     onSelected: (bool selected) {
                       setState(() {
@@ -284,7 +281,7 @@ String waitingTime = "";
                   ),
 
                   ChoiceChip(
-                    label: Text('Judo'),
+                    label: Text('CheeseMayo'),
                     selected: choice[3] == true,
                     onSelected: (bool selected) {
                       setState(() {
@@ -296,7 +293,7 @@ String waitingTime = "";
         ),
 //==================================
 
-       
+       SizedBox(height: 20,),
         Text("Spice"),
         Slider(
           value: sliderValue,
@@ -315,7 +312,7 @@ String waitingTime = "";
       Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('OFF'),
+            Text('Eat In'),
            
             Switch(
             value: isON,
@@ -330,7 +327,7 @@ String waitingTime = "";
             },
           ),
            
-          Text('ON')  //add a bit more UI
+          Text('Take Away')  //add a bit more UI
            
            
           ],
@@ -398,10 +395,6 @@ String waitingTime = "";
 
   }
 }
-
-
-
-
 
 
 
