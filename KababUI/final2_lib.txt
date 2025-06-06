@@ -122,8 +122,10 @@ String waitingTime = "";
                 onChanged: (String? newValue) {
                   //how to disallow "Select Kababas" from being selected
                     setState(() {
-                      presentValue = newValue!;
-                      print("You have selected $presentValue");
+                       if(newValue!="Select Kababas"){
+                        presentValue = newValue!;
+                        print("You have selected $presentValue");
+                      }
                     });
                  
                 },
