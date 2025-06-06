@@ -122,8 +122,10 @@ String waitingTime = "";
                 onChanged: (String? newValue) {
                   //how to disallow "Select Kababas" from being selected
                     setState(() {
-                      presentValue = newValue!;
-                      print("You have selected $presentValue");
+                      if(newValue!="Select Kababas"){
+                        presentValue = newValue!;
+                        print("You have selected $presentValue");
+                      }
                     });
                  
                 },
@@ -354,8 +356,39 @@ String waitingTime = "";
   }
 
   void placeMyOrder() {
-    String fullOrder="You have selected ";
+    String fullOrder="You have selected ";//add presentValue
     
+    
+    String addMeat="";
+    if(selectedRadio==1){ addMeat="Chicken";}
+    else if(selectedRadio==2){ addMeat="Beef";}
+    else if(selectedRadio==3){ addMeat="Pork";}
+
+    fullOrder = fullOrder + " with $addMeat.";
+
+    String addExtras="";
+    //if(checked[0]==true){addExtras=" ";}
+    //if(checked[1]==true){addExtras = addExtras + " ";}
+    //if(checked[2]==true){addExtras = addExtras + " ";}
+    //if(checked[3]==true){addExtras = addExtras + " ";}
+
+    fullOrder = fullOrder +"Extras Selected: $addExtras";
+
+    String addPadazas="";
+    //if(){addPadazas = " Garlic";}
+    //if(){addPadazas = addPadazas + " Teriyaki";}
+    //if(){addPadazas = addPadazas + " Krienai";}
+    //if(){addPadazas = addPadazas + " CheeseMayo";}
+
+    //fullOrder = fullOrder +"Sauce Selected: $addPadazas";
+
+    //fullOrder = fullOrder + "Spice Level: ";
+
+    String eating="";
+    //if(){ eating = "Eating Inside";}
+    //else{eating="Take Away";}
+
+    //fullOrder = fullOrder +"\n$eating";
 
 
     //====================
