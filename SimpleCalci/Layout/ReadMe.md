@@ -1,5 +1,5 @@
 # Flutter app in Zapp!
 
 
-https://zapp.run/github/YohanWadia/MyStar/tree/main/SimpleCalci/Layout/main
+https://zapp.run/github/YohanWadia/MyStar/tree/main/SimpleCalci/Layout
 # Flutter app in Zapp!
