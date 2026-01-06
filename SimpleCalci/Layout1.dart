@@ -127,3 +127,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+//   ,style: TextStyle(fontSize: 36), textAlign: TextAlign.right
