@@ -152,8 +152,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
                   child: Text("="),
                   onPressed: (){
+                    if(sign == "+"){
+                    
+                    }
 
 
+                  setState(() { });  
                   },
                 ),
 
