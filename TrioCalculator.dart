@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
             // text to show sign + - * /
-            Text("$sign"),
+            Text("$sign"),  //  , style:TextStyle(fontSize: 28)),
 
 
 
@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ElevatedButton(
                   child: Text("+"),
                   onPressed: (){
-                   
+                   sign = "+";
 
 
                   setState(() { });
@@ -152,8 +152,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
                   child: Text("="),
                   onPressed: (){
-                    if(sign == "+"){
+                    if(sign == "+"){                    
                     
+
                     }
 
 
@@ -175,4 +176,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
