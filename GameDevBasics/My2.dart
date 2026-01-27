@@ -23,29 +23,29 @@ class MyHomePage extends StatefulWidget {
  
 class _MyHomePageState extends State<MyHomePage> {
  double x=0,y=0;
- String move = ''; 
+ String move = ""; 
  late Timer _timer; 
   
  
   void startMoving() {
-    _timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
+    _timer = Timer.periodic(Duration(milliseconds: 1000), (Timer t) {
       setState(() {
 //=====================================        
         print("Timer: Square moves $move");
         
-        if(move=='right'){
+        if(move=="right"){
           
         }
        
-        else if(move=='left'){
-          
+        else if(move=="left"){
+         
         }
        
-        else if(move=='down'){
-          
+        else if(move=="down"){
+         
         }
        
-        else if(move=='up'){
+        else if(move=="up"){
          
         }
         
@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
            
         ElevatedButton(
           onPressed:(){
-            move="";
+            move="right";
             setState((){});
           },
         child:Text(">>")
@@ -110,13 +110,22 @@ class _MyHomePageState extends State<MyHomePage> {
            
         ElevatedButton(
           onPressed:(){
-            move="down";
+            move="";
             setState((){});
           },
         child:Text("Down")
         ),
 
-           
+
+        ElevatedButton(
+          onPressed:(){
+            move="";
+            setState((){});
+          },
+        child:Text("STOP")
+        ),
+
+
         ])        
       ]),
      )
