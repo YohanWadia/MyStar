@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark,
       ),
-      home: const MyHomePage(title: 'Flutter Example App'),
+      home: const MyHomePage(title: 'My Calculator'),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -125,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
-            //Buttons
+            //======= Row of Buttons =======
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -141,6 +141,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
+                
+
                 ElevatedButton(
                   child: Text("-"),
                   onPressed: (){
@@ -153,8 +155,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
+                
+
                  ElevatedButton(
-                  child: Text("*"),
+                  child: Text("x"),
                   onPressed: (){
                     sign = "*";
 
@@ -241,6 +245,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
+
+            
 
             Text(answer, style:TextStyle(fontSize: 28)),
 
