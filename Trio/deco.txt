@@ -1,0 +1,47 @@
+
+ElevatedButton(
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.orange, // Background color
+    foregroundColor: Colors.white, // Text color
+    shape: const CircleBorder(),   // Makes it circular
+    minimumSize: const Size(50, 50),   // Minimum width and height
+  ),
+  child: const Text(
+    "=",
+    style: TextStyle(
+      fontSize: 24,           // Bigger font
+      fontWeight: FontWeight.bold, // Bold text
+    ),
+  ),
+  onPressed: () {
+    if (sign == "+") {
+      // Your logic here
+    }
+    setState(() {});
+  },
+),
+
+================================
+SizedBox(
+  width: 200, // Constrains the width
+  child: TextField(
+    controller: myController2,
+    decoration: InputDecoration(
+      labelText: "Enter Number",
+      suffixIcon: const Icon(Icons.calculate, color: Colors.orange), // Icon on the right
+      //prefixIcon: const Icon(Icons.search, color: Colors.orange), // Icon on the left,
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(50),
+        borderSide: const BorderSide(color: Colors.orange, width: 1),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(50),
+        borderSide: const BorderSide(color: Colors.orange, width: 2),
+      ),
+    ),
+  ),
+),
+
+
+
+
