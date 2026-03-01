@@ -10,15 +10,15 @@ Container(
             focusColor: Colors.pink[100],
             icon: Icon(Icons.arrow_downward),
             underline: Container(height: 1,color: Colors.black),//SizedBox.shrink(),
-            value: initialValue,
+            value: presentValue,
             items: kababasList.map((String items) {
               return DropdownMenuItem(value: items, child: Text(items));
             }).toList(),
             onChanged: (String? newValue) {
               if(newValue!="Select Kababas"){
                 setState(() {
-                  initialValue = newValue!;
-                  print("You have selected $initialValue");
+                  presentValue = newValue!;
+                  print("You have selected $presentValue");
                 });
               }
             },
