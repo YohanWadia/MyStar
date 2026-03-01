@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-void main() => runApp(const MyApp());
+
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -30,7 +33,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-   bool isON = true;
+   bool isON = false;
+   Color displayColor = Colors.grey;
+   String status = "WiFi is OFF";
 
   @override
   Widget build(BuildContext context) {
@@ -38,29 +43,35 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('OFF'),
-            
-            Switch(
-            value: isON,
-            activeColor: Colors.red,
-            onChanged: (bool value) {              
-              setState(() {
-                isON = value;
-                print(isON);
-              });
+      body: Column(
+        children: [
+          Icon(Icons.wifi,size: 60, color: displayColor,),
 
-            },
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('OFF'),
+              
+              Switch(
+              value: isON,
+              activeColor: Colors.red,
+              onChanged: (bool value) {              
+                setState(() {
+                  isON = value;
+                  print(isON);
+                });
+              },
+            ),
+              
+              
+            Text('ON')  //add a bit more UI             
+            ],
           ),
-            
-          Text('ON')  //add a bit more UI
-            
-           
-          ],
-        ),
+
+
+          Text(status, style: TextStyle(fontSize: 28),),
+
+        ],
       ),
      
       
