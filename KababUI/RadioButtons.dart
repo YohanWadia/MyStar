@@ -35,8 +35,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int selectedRadio=0;
-  //String optionSelected="";
+  String optionSelected="";
   
   
   @override
@@ -54,12 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ListTile(
         title: Text("Male"),
         leading: Radio(
-          value: 1,
-          groupValue: selectedRadio,
+          value: "Male",
+          groupValue: optionSelected,
           activeColor: Colors.green,
           onChanged: (val) {
            print("RadioButton $val selected");
-            selectedRadio = val!;
+            optionSelected = val!;
             setState(() {});
           },
         ),
@@ -68,14 +67,15 @@ class _MyHomePageState extends State<MyHomePage> {
     
       Expanded(child:
         ListTile(
+
         title: Text("Female"),
         leading: Radio(
-          value: 2,
-          groupValue: selectedRadio,
+          value: "Female",
+          groupValue: optionSelected,
           activeColor: Colors.green,
           onChanged: (val) {
             print("RadioButton $val selected");
-            selectedRadio = val!;
+            optionSelected = val!;
             setState(() {});
           }
         ),
@@ -86,12 +86,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ListTile(
         title: Text("EMail"),
         leading: Radio(
-          value: 3,
-          groupValue: selectedRadio,
+          value: "EMail",
+          groupValue: optionSelected,
           activeColor: Colors.green,
           onChanged: (val) {
             print("RadioButton $val selected");
-            selectedRadio = val!;
+            optionSelected = val!;
             setState(() {});
           },
         ),
