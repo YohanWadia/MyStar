@@ -31,23 +31,15 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  List<bool> choice =[false,false,false];
+class _MyHomePageState extends State<MyHomePage> {  
+  List<String> items =["Football","Basketball","Tennis"];
+  List<bool> choice =[false,       false,       false];
   
   @override
   Widget build(BuildContext context) {
@@ -61,30 +53,30 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ChoiceChip(
-                    label: Text('FootBall'),
-                    selected: choice[0] == true,
+                    label: Text(items[0]),
+                    selected: choice[0],
                     onSelected: (bool selected) {
                       setState(() {
-                        choice[0] = selected ? true : false;
+                        choice[0] = selected;
                       });
                     },
                   ),
             ChoiceChip(
-                    label: Text('BasketBall'),
-                    selected: choice[1] == true,
+                    label: Text(items[1]),
+                    selected: choice[1],
                     onSelected: (bool selected) {
                       setState(() {
-                        choice[1] = selected ? true : false;
+                        choice[1] = selected;
                       });
                     },
                   ),
 
                   ChoiceChip(
-                    label: Text('Tennis'),
-                    selected: choice[2] == true,
+                    label: Text(items[2]),
+                    selected: choice[2],
                     onSelected: (bool selected) {
                       setState(() {
-                        choice[2] = selected ? true : false;
+                        choice[2] = selected;
                       });
                     },
                   ),
