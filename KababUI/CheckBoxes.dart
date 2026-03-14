@@ -38,7 +38,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<bool> checked = [false,false,false,false];
+   List<String> items = ["Fries", "Drink", "Cookie", "Jalapeno"];
+  List<bool> checked = [false,     false,    false,  false];
   
   
   @override
@@ -49,63 +50,56 @@ class _MyHomePageState extends State<MyHomePage> {
       title: Text(widget.title),
       ),
       body: Center(
-        child: Row(          
+        child: Column(          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
 
-            Expanded(
-              child: CheckboxListTile(
-              value: checked[0],
-              onChanged: (bool? value) {
-                setState(() {
-                  checked[0] = value!;
-                });
-              },
-              title: const Text('Fries'),
-              controlAffinity: ListTileControlAffinity.leading,
-          ),
-            ),
-
-          Expanded(
-            child: CheckboxListTile(
-              value: checked[1],
-              onChanged: (bool? value) {
-                setState(() {
-                  checked[1] = value!;
-                });
-              },
-              title: const Text('Drink'),
-              controlAffinity: ListTileControlAffinity.leading,
-            ),
+            CheckboxListTile(
+            value: checked[0],
+            onChanged: (bool? value) {
+              setState(() {
+                checked[0] = value!;
+              });
+            },
+            title: Text(items[0]),
+            controlAffinity: ListTileControlAffinity.leading,
           ),
 
-          Expanded(
-            child: CheckboxListTile(
-              value: checked[2],
-              onChanged: (bool? value) {
-                setState(() {
-                  checked[2] = value!;
-                });
-              },
-              title: const Text('Cookie'),
-              controlAffinity: ListTileControlAffinity.leading,
-
-            ),
+          CheckboxListTile(
+            value: checked[1],
+            onChanged: (bool? value) {
+              setState(() {
+                checked[1] = value!;
+              });
+            },
+            title: Text(items[1]),
+            controlAffinity: ListTileControlAffinity.leading,
           ),
 
-          Expanded(
-            child: CheckboxListTile(
-              value: checked[3],
-              onChanged: (bool? value) {
-                setState(() {
-                  checked[3] = value!;
-                });
-              },
-              title: const Text('Jalapeno'),
-              controlAffinity: ListTileControlAffinity.leading,
-            ),
+          CheckboxListTile(
+            value: checked[2],
+            onChanged: (bool? value) {
+              setState(() {
+                checked[2] = value!;
+              });
+            },
+            title: Text(items[2]),
+            controlAffinity: ListTileControlAffinity.leading,
+
+          ),
+
+          CheckboxListTile(
+            value: checked[3],
+            onChanged: (bool? value) {
+              setState(() {
+                checked[3] = value!;
+              });
+            },
+            title: Text(items[3]),
+            controlAffinity: ListTileControlAffinity.leading,
           ),
             
+
           ],
         ),
       ),
