@@ -1,3 +1,3 @@
 # Flutter app in Zapp!
 
-https://zapp.run/github/YohanWadia/QueenM/tree/main/Flutter/GUI/sliderAdv
+https://zapp.run/github/YohanWadia/MyStar/tree/main/KababUI/sliderAdv
