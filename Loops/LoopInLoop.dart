@@ -3,12 +3,12 @@ Future<void> main() async {
 
 
   
-  for (int i = 1; i <= 10; i++) {
-    print("i ================= $i");
+  for (int y = 1; y <= 10; y++) {
+    print("Y ================= $y");
 
-    for(int j =1; j<=10; j++){
+    for(int x =1; x<=10; x++){
 
-      print("j: $j");
+      print("X: $x");
 
     }//j loop ends    
 
