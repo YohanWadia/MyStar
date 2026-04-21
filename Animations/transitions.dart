@@ -37,7 +37,7 @@ class _AlignTransitionExampleState extends State<AlignTransitionExample>
 
   //run the main animation
   void _runMainAnimation() async {
-    await _controllerMain.forward(); //repeat(count:X); //repeat(reverse:true);
+    await _controllerMain.forward(); //repeat(count:X); //repeat(reverse:????);
   }
 
   //=================MAIN
