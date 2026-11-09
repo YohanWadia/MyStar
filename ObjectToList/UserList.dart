@@ -161,20 +161,20 @@ class _UserListScreenState extends State<UserListScreen> {
             //============================================
             ListTile(
               // Property 1: Real photo in CircleAvatar
-              leading: CircleAvatar(            
-                backgroundImage: NetworkImage(userObj.avatarUrl),
-              ),
+//               leading: CircleAvatar(            
+//                 backgroundImage: NetworkImage(userObj.avatarUrl),
+//               ),
               
-              // Property 2: Name and Department
-              title: Text(
-                userObj.name,style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text(userObj.department),
+//               // Property 2: Name and Department
+//               title: Text(
+//                 userObj.name,style: const TextStyle(fontWeight: FontWeight.bold),
+//               ),
+//               subtitle: Text(userObj.department),
               
-              // Property 3: Trailing Icon on the right
-              trailing: Icon(
-                userObj.badgeIcon,
-              ),              
+//               // Property 3: Trailing Icon on the right
+//               trailing: Icon(
+//                 userObj.badgeIcon,
+//               ),              
             ),
             
             //============================================
